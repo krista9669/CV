@@ -47,6 +47,5 @@ Output
 - Foreground mask showing detected motion
 - Live video feed with bounding boxes around moving objects
 - Labels indicating detected motion regions
-
 - Contour detection and filtering
 - Real-time motion tracking using OpenCV
