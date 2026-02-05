@@ -48,9 +48,5 @@ Output
 - Live video feed with bounding boxes around moving objects
 - Labels indicating detected motion regions
 
-What I Learned
-
-- Background subtraction techniques
-- Morphological operations for noise removal
 - Contour detection and filtering
 - Real-time motion tracking using OpenCV
