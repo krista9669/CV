@@ -1,51 +1,134 @@
-**Face Detection**
+## Description
 
-This project performs real-time face detection using a webcam and OpenCV. It uses a pre-trained Haar Cascade classifier to detect human faces and draw 
-bounding boxes around them in live video.
+This repository contains beginner-friendly Computer Vision projects implemented using Python and OpenCV. The projects cover real-time face detection, motion detection, and basic image processing techniques using images and webcam feeds.
 
-Dataset
+## Repository Structure
 
-- Live video feed from the system webcam / no external dataset
+```text
+cv_basics/
+│
+├── face_detector.py
+├── motion_detection.py
+│
+├── IP/
+│   ├── image_processing.ipynb
+│   └── doggo.jpeg
+│
+└── README.md
+```
 
-Approach
+## Projects
 
-- Captured video frames using OpenCV’s `VideoCapture`
-- Converted frames to grayscale for faster processing
-- Used Haar Cascade (`haarcascade_frontalface_default.xml`) for face detection
-- Detected faces and drew bounding boxes around them in real time
-- Displayed the processed video feed on screen
+### Face Detection
 
-Output
+Real-time face detection using OpenCV's Haar Cascade Classifier.
 
-- Displays a live webcam window
-- Detects faces in real time
-- Draws blue rectangles around detected faces
+#### Features
 
+- Detects human faces from a live webcam feed
+- Uses a pre-trained Haar Cascade model
+- Draws bounding boxes around detected faces
+- Real-time video processing
 
-**Motion Detection**
+#### Approach
 
-This project detects and tracks moving objects in a video stream using background subtraction. It highlights motion by drawing bounding boxes around 
-moving regions in real time.
+- Capture webcam frames using OpenCV
+- Convert frames to grayscale
+- Apply Haar Cascade face detection
+- Draw rectangles around detected faces
+- Display the processed video stream
 
-Dataset
+#### Output
 
-- Live video feed from the system webcam.
-- No external dataset is required.
+- Live webcam window
+- Face detection in real time
+- Bounding boxes around detected faces
 
-Approach
+---
 
-- Captured video frames using OpenCV  
-- Used Background Subtraction (MOG2) to separate moving objects from the background  
-- Applied morphological operations to reduce noise  
-- Detected contours from the foreground mask  
-- Filtered small contours and tracked significant motion  
-- Drew bounding boxes around detected moving objects  
+### Motion Detection
 
+Real-time motion detection using Background Subtraction (MOG2).
 
-Output
+#### Features
 
-- Foreground mask showing detected motion
-- Live video feed with bounding boxes around moving objects
-- Labels indicating detected motion regions
+- Detects moving objects in a video stream
+- Background subtraction using MOG2
+- Noise reduction through image processing
 - Contour detection and filtering
-- Real-time motion tracking using OpenCV
+- Motion tracking with bounding boxes
+
+#### Approach
+
+- Capture video frames from webcam
+- Apply MOG2 background subtraction
+- Generate a foreground mask
+- Detect contours from moving regions
+- Filter small contours
+- Draw bounding boxes around detected motion
+
+#### Output
+
+- Foreground mask visualization
+- Real-time motion tracking
+- Bounding boxes around moving objects
+- Contour-based object detection
+
+---
+
+### Image Processing
+
+The `IP` folder contains experiments demonstrating basic image processing operations using OpenCV.
+
+#### Files
+
+- `image_processing.ipynb` – Jupyter Notebook containing image processing examples
+- `doggo.jpeg` – Sample image used for experimentation
+
+#### Concepts Covered
+
+- Reading and displaying images
+- Image resizing
+- Cropping
+- Color space conversion
+- Drawing shapes and text
+- Edge detection
+- Basic image transformations
+
+---
+
+## Requirements
+
+Install the required dependencies:
+
+```bash
+pip install opencv-python numpy
+```
+
+For Jupyter Notebook:
+
+```bash
+pip install notebook
+```
+
+---
+
+## Technologies Used
+
+- Python
+- OpenCV
+- NumPy
+- Jupyter Notebook
+
+---
+
+## Learning Outcomes
+
+This repository demonstrates:
+
+- Real-time video processing
+- Face detection using Haar Cascades
+- Motion detection using background subtraction
+- Contour detection and filtering
+- Fundamental image processing techniques
+- Practical OpenCV applications
